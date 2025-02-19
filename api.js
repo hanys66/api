@@ -1,12 +1,13 @@
 import express from 'express';
 import puppeteer from 'puppeteer';
-
+const puppeteerConfig = import('./.puppeteerrc.cjs');
 const app = express();
 const PORT = 8889;
 
 // Function to Scrape Data
 async function scrapeNews() {
-    const browser = await puppeteer.launch({ headless: true });
+   // const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch(puppeteerConfig);
     const page = await browser.newPage();
 
     //await page.goto('https://news.sky.com/entertainment/', { waitUntil: 'domcontentloaded' });
