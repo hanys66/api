@@ -3,7 +3,6 @@ import puppeteer from 'puppeteer';
 const puppeteerConfig = import('./.puppeteerrc.cjs');
 const app = express();
 const PORT = 8889;
-
 // Function to Scrape Data
 async function scrapeNews() {
    // const browser = await puppeteer.launch({ headless: true });
